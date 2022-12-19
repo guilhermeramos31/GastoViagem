@@ -1,18 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
+
+    <EditText
+        android:inputType="numberDecimal"
+        android:id="@+id/edit_distance"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/distance"
+        />
+    <TextView
+        android:paddingBottom="16dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_distance"
+        />
+
+    <EditText
+        android:inputType="numberDecimal"
+        android:id="@+id/edit_price"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/price"
+        />
+    <TextView
+        android:paddingBottom="16dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price_per_liter"
+        />
+
+    <EditText
+        android:inputType="numberDecimal"
+        android:id="@+id/editAutonomy"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/autonomy"
+    />
+    <TextView
+        android:paddingBottom="16dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kms"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:text="@string/your_spend"
+        android:textSize="16sp"
+        android:textAllCaps="true"
+        />
+    <TextView
+        android:id="@+id/textValor"
+        android:padding="16dp"
+        android:textColor="@color/purple_700"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/spent"
+        android:layout_gravity="center"
+        android:textSize="32sp"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/button_calc"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/calculate"
+        app:backgroundTint="@color/green"/>
+
+</LinearLayout>
